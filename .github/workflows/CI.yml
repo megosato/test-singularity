@@ -26,3 +26,12 @@ jobs:
           singularity-version: 3.8.3
       - name: Run a singularity container
         run: singularity run docker://hello-world
+
+      - name: pull from ghcr.io/osatom
+          env:
+            SINGULARITY_DOCKER_USERNAME: ${{ secrets.SINGULARITY_DOCKER_USERNAME }}
+            SINGULARITY_DOCKER_PASSWORD: ${{ secrets.SINGULARITY_DOCKER_PASSWORD }}
+          run: |
+            export SINGULARITY_DOCKER_USERNAME=$SINGULARITY_DOCKER_USERNAME \
+            export SINGULARITY_DOCKER_PASSWORD=$SINGULARITY_DOCKER_PASSWORD \
+            singularity run ghcr.io/megosato/helloworldwait

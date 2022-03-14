@@ -34,4 +34,4 @@ jobs:
         run: |
           export SINGULARITY_DOCKER_USERNAME=$SINGULARITY_DOCKER_USERNAME \
           export SINGULARITY_DOCKER_PASSWORD=$SINGULARITY_DOCKER_PASSWORD \
-          singularity run ghcr.io/megosato/helloworldwait
+          singularity run docker://ghcr.io/megosato/helloworldwait

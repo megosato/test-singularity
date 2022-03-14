@@ -29,4 +29,4 @@ jobs:
 
       - name: pull from ghcr.ioosatom
         run: |
-          singularity run docker://ghcr.io/megosato/helloworldwait
+          singularity run docker://ghcr.io/megosato/printhelloworld
